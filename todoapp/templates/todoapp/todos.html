@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>To Do List</h1>
+<table class='table'>
+ <tr>
+     <th>Name</th>
+     <th>Description</th>
+ </tr>
+ {% for t in todos_list %}
+   <tr>
+       <td><a href="{% url 'todosdetails' id=p.id %}">{{ t.todoname }}</a></td>
+       <td>{{ t.tododescription }}</td>
+   </tr>
+
+ {% endfor %}
+
+
+</table>
+
+
+{% endblock %}
